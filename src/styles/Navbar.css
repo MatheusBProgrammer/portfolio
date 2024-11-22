@@ -1,0 +1,52 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+.navbar-left {
+  padding-left: 5em;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 40px; /* Ajuste o tamanho do logotipo */
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem; /* Espaçamento entre os links */
+  padding-right: 5em;
+}
+
+.navbar-links a {
+  color: #fff; /* Cor padrão do texto */
+  text-decoration: none;
+  font-size: 1rem;
+  background: none; /* Garantir que o background esteja limpo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: currentColor;
+  transition: all 2s ease; /* Define a duração da transição */
+}
+
+.navbar-links a:hover {
+  background: linear-gradient(90deg, #7f00ff, #e100ff, #00d4ff); /* Degradê */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Faz o texto ficar com o degradê */
+}

@@ -1,0 +1,31 @@
+.portfolio {
+  padding: 2rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.project-card a {
+  display: block;
+  margin-top: 0.5rem;
+  background-color: #6200ea;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
