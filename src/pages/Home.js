@@ -6,19 +6,28 @@ import Boneco from "../assets/images/boneco.png";
 import Pacman from "../assets/images/pacman.png";
 import Dinossauro from "../assets/images/dinossauro.png";
 import BaseDinossauro from "../assets/images/base-dinossauro.png";
+import { useSpring, animated } from "@react-spring/web";
 function Home() {
+  const springs = useSpring({
+    from: { x: -200 },
+    to: { x: 0 },
+    config: {
+      duration: 1000,
+    },
+  });
+
   return (
     <div className="home">
       <Navbar />
       <main className="home-content">
-        <div className="home-text">
+        <animated.div className="home-text" style={{ ...springs }}>
           <h2>
             <span className="label"> 👋 Olá, meu nome é</span>{" "}
             <span className="nome">Matheus Barreto</span>
           </h2>
           <p>Desenvolvedor FullStack</p>
           <Link to="/portfolio" className="cta-button">
-            Conheça meu portfólio
+            Conheça meus projetos
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -33,7 +42,7 @@ function Home() {
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </Link>
-        </div>
+        </animated.div>
         <div className="home-image-box">
           <img src={Boneco} alt="Boneco" className="boneco" />
           <img src={Pacman} alt="Pacman" className="pacman" />

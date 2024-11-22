@@ -27,6 +27,8 @@
 }
 
 .home-text h2 {
+  display: flex;
+  flex-direction: column;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -39,11 +41,7 @@
 
 .home-text h2 .nome {
   font-size: 3rem;
-  background: linear-gradient(
-    90deg,
-    #7f00ff,
-    #e100ff
-  ); /* Ajuste as cores do degradê */
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -55,7 +53,7 @@
   font-weight: bold;
 }
 
-/* Botão de chamada para ação */
+/* Botão de navegação */
 .cta-button {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
@@ -122,7 +120,7 @@
   width: 7%;
   height: auto;
   top: 20%;
-  right: 12%;
+  right: 8%;
   rotate: 15deg;
   opacity: 0.3;
   animation: rotateSwing 4s infinite;
@@ -140,7 +138,7 @@
   object-fit: cover;
   height: 4%; /* Ajuste automático para manter as proporções */
   right: 40%; /* Ajusta o posicionamento horizontal */
-  top: 60%; /* Ajusta o posicionamento vertical */
+  top: 61.6%; /* Ajusta o posicionamento vertical */
   gap: 1rem; /* Espaçamento entre os elementos */
 }
 
@@ -247,4 +245,290 @@
 
 .contato-icons a:hover {
   color: #00d4ff; /* Cor ao passar o mouse */
+}
+/* Importando a fonte Montserrat do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Estilos gerais da página */
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00001a;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 4rem; /* Para descer o conteúdo abaixo do navbar */
+}
+
+/* Estilização do texto principal */
+.home-text {
+  max-width: 50%;
+  color: #fff;
+  text-align: left;
+}
+
+.home-text h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-text h2 .label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.home-text h2 .nome {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-text p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: rgb(85, 207, 255);
+  font-weight: bold;
+}
+
+/* Botão de navegação */
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: none;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    #7f00ff,
+    #e100ff,
+    #00d4ff
+  ); /* Degradê na borda */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(
+    90deg,
+    #7f00ff,
+    #e100ff,
+    #00d4ff
+  ); /* Degradê no fundo */
+  color: #fff;
+}
+
+.cta-button svg {
+  margin-left: 0.5rem; /* Espaçamento entre o texto e a seta */
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor; /* Faz a seta herdar a cor do texto */
+}
+
+/* Estilos para a imagem "Boneco" */
+.boneco {
+  max-width: 70%;
+  height: auto;
+}
+
+.home-image-box {
+  width: 70%;
+  height: 150%;
+  display: flex;
+  justify-content: end;
+}
+
+.home-image-box .boneco {
+  z-index: 10;
+  position: relative;
+  right: 0%;
+  min-width: 5em;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-image-box .pacman {
+  position: absolute;
+  width: 7%;
+  height: auto;
+  top: 20%;
+  right: 8%;
+  rotate: 15deg;
+  opacity: 0.3;
+  animation: rotateSwing 4s infinite;
+  transform: scaleX(-1);
+}
+
+/* Dinossauro e base */
+.home-image-box .dinossauro-box {
+  display: flex; /* Organiza os elementos dentro na vertical */
+  flex-direction: column; /* Empilha um em cima do outro */
+  align-items: center; /* Centraliza horizontalmente */
+  position: absolute;
+  width: auto;
+  opacity: 0.4;
+  object-fit: cover;
+  height: 4%; /* Ajuste automático para manter as proporções */
+  right: 40%; /* Ajusta o posicionamento horizontal */
+  top: 61.6%; /* Ajusta o posicionamento vertical */
+  gap: 1rem; /* Espaçamento entre os elementos */
+}
+
+.home-image-box .dinossauro {
+  position: absolute;
+  top: 50%;
+  height: 100px; /* Altura do dinossauro */
+  width: auto;
+  animation: jump 1.5s infinite;
+}
+
+.home-image-box .base-dinossauro {
+  position: absolute;
+  top: 100%;
+  height: 100px; /* Altura da base */
+  width: auto;
+  opacity: 0.4;
+  transform: scaleX(-1);
+}
+
+/* Cubos flutuantes */
+.home-image-box .cubos {
+  position: absolute;
+  top: 35%;
+  right: 45%;
+  width: 7%; /* Ajuste conforme necessário */
+  height: auto; /* Mantém a proporção */
+  opacity: 0.4;
+}
+
+/* Animações */
+@keyframes rotateSwing {
+  0% {
+    transform: rotate(30deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(-30deg) scaleX(-1);
+  }
+  100% {
+    transform: rotate(30deg) scaleX(-1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Contato */
+.contato {
+  position: relative;
+  top: 10%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  right: 10%;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contato-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contato-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.contato-icons a:hover {
+  color: #00d4ff; /* Cor ao passar o mouse */
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-text {
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .home-text h2 {
+    font-size: 2rem;
+  }
+
+  .home-text h2 .nome {
+    font-size: 2.5rem;
+  }
+
+  .home-text p {
+    font-size: 1.2rem;
+  }
+
+  .home-image-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-image-box .boneco {
+    position: static;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .home-image-box .pacman,
+  .home-image-box .dinossauro-box {
+    display: none;
+  }
+  .contato {
+    right: 0;
+    margin: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .contato-icons {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-image-box .boneco {
+    width: 35%;
+  }
 }
